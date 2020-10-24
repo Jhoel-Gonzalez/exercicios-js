@@ -1,23 +1,49 @@
-let input = prompt('Digite seu "Primeiro" nome')
-console.log(input)
-let input1 = prompt('Digite seu "segundo" nome')
-console.log(input1)
-let input2 = prompt('Digite seu sobrenome')
-console.log(input2)
-let input3 = prompt('Digite sua idade')
-console.log(input3)
+const primeiroUsuario = {
+	nome: "",
+	sobreNome: "",
+	idade: ""
+}
+const segundoUsuario = {
+	nome: "",
+	sobreNome: "",
+	idade: ""
 
-/*A utilizacao do nome de variavel "input" é a modo 
-de ilutracao para esse exercicio */
+}
 
-alert(`Olá ${input} que bom ter vocé aquí conosco 
-entao a sua idade é ${input3} mesmo que legal!`)
+primeiroUsuario.nome = prompt('Digite seu nome')
+primeiroUsuario.sobreNome = prompt('Digite seu sobrenome')
+primeiroUsuario.idade = prompt('Digite a sua idade')
+console.log(primeiroUsuario.nome, primeiroUsuario.idade, primeiroUsuario.corDeOlhos)
+
+segundoUsuario.nome = prompt('Digite seu nome')
+segundoUsuario.sobreNome = prompt('Digite seu sobrenome')
+segundoUsuario.idade = prompt('Digite a sua idade')
+
+console.log(segundoUsuario.nome, segundoUsuario.idade, segundoUsuario.corDeOlhos)
+
+if (primeiroUsuario.idade === segundoUsuario.idade) {
+	alert(`Yuhuu! ${primeiroUsuario.nome} e ${segundoUsuario.nome} sao da mesma idade`)
+
+} else if (primeiroUsuario.idade > segundoUsuario.idade) {
+	alert(` O/A ${primeiroUsuario.nome} é mais velho/a que ${segundoUsuario.nome}`)
+
+} else if (primeiroUsuario.idade < segundoUsuario.idade) {
+	alert(`O/A ${segundoUsuario.nome} é mais velho/a que ${primeiroUsuario.nome}`)
+
+}
+
 
 console.table(
-    {
-        nome: input,
-        segundoNome: input1,
-        sobreNome: input2,
-        idade: input3
-    }
+	{
+		nome: primeiroUsuario.nome,
+		sobreNome: primeiroUsuario.sobreNome,
+		idade: primeiroUsuario.idade,
+	}
+)
+console.table(
+	{
+		nome: segundoUsuario.nome,
+		sobreNome: segundoUsuario.sobreNome,
+		idade: segundoUsuario.idade,
+	}
 )
