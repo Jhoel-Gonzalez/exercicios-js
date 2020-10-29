@@ -16,6 +16,12 @@ function oldest(array) {
     } return oldestPerson
 }
 
+function registration(array) {
+    for (let personRegistration of array) {
+        console.log(`${personRegistration.firstName} ${personRegistration.lastName}: ${personRegistration.age}`)
+    }
+}
+
 let personArray = []
 let repetition = 0
 do {
@@ -30,8 +36,5 @@ do {
 } while (confirm("Voce deseja adicionar mais uma pessoa?"))
 
 console.log('Registros de:')
-for (let personRegistration of personArray) {
-    console.log(`${personRegistration.firstName} ${personRegistration.lastName}: ${personRegistration.age}`)
-}
-    
+registration(personArray)
 console.log(`A pessoa mais velha é: ${oldest(personArray)}`)
