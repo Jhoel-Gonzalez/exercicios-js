@@ -13,37 +13,25 @@ const segundoUsuario = {
 primeiroUsuario.nome = prompt('Digite seu nome')
 primeiroUsuario.sobreNome = prompt('Digite seu sobrenome')
 primeiroUsuario.idade = prompt('Digite a sua idade')
-console.log(primeiroUsuario.nome, primeiroUsuario.idade, primeiroUsuario.corDeOlhos)
 
 segundoUsuario.nome = prompt('Digite seu nome')
 segundoUsuario.sobreNome = prompt('Digite seu sobrenome')
 segundoUsuario.idade = prompt('Digite a sua idade')
 
-console.log(segundoUsuario.nome, segundoUsuario.idade, segundoUsuario.corDeOlhos)
+console.log(`Registros de ${primeiroUsuario.nome} ${primeiroUsuario.sobreNome} e ${segundoUsuario.nome} ${segundoUsuario.sobreNome}`)
+console.log(`Idade de ${primeiroUsuario.nome} ${primeiroUsuario.sobreNome}: ${primeiroUsuario.idade}`)
+console.log(`Idade de ${segundoUsuario.nome} ${segundoUsuario.sobreNome}: ${segundoUsuario.idade}`)
 
 if (primeiroUsuario.idade === segundoUsuario.idade) {
-	alert(`Yuhuu! ${primeiroUsuario.nome} e ${segundoUsuario.nome} sao da mesma idade`)
+	console.log(`Yuhuu! ${primeiroUsuario.nome} ${primeiroUsuario.sobreNome} e ${segundoUsuario.nome} ${segundoUsuario.sobreNome} são da mesma idade.`)
 
 } else if (primeiroUsuario.idade > segundoUsuario.idade) {
-	alert(` O/A ${primeiroUsuario.nome} é mais velho/a que ${segundoUsuario.nome}`)
+	console.log(`${primeiroUsuario.nome} ${primeiroUsuario.sobreNome} é mais velho/a que ${segundoUsuario.nome} ${segundoUsuario.sobreNome}.`)
 
-} else if (primeiroUsuario.idade < segundoUsuario.idade) {
-	alert(`O/A ${segundoUsuario.nome} é mais velho/a que ${primeiroUsuario.nome}`)
+} else {
+	console.log(`${segundoUsuario.nome} ${segundoUsuario.sobreNome} é mais velho/a que ${primeiroUsuario.nome} ${primeiroUsuario.sobreNome}.`)
 
 }
 
 
-console.table(
-	{
-		nome: primeiroUsuario.nome,
-		sobreNome: primeiroUsuario.sobreNome,
-		idade: primeiroUsuario.idade,
-	}
-)
-console.table(
-	{
-		nome: segundoUsuario.nome,
-		sobreNome: segundoUsuario.sobreNome,
-		idade: segundoUsuario.idade,
-	}
-)
+
